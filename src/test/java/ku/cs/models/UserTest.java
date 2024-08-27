@@ -26,7 +26,7 @@ class UserTest {
     }
 
     @Test
-    void testSetPassword() {
+    public void testSetPassword() {
         User user = new User("user1", "1234");
         user.setPassword("5678");
         boolean unexpected = user.validatePassword("1234");

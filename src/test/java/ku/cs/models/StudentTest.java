@@ -13,7 +13,14 @@ class StudentTest {
 //    }
 
     @Test
-    void testAddscore(){
+    public void testIsId(){
+        Student s1 = new Student("6610402222", "alina");
+        boolean actual = s1.isId("6610402222");
+        assertTrue(actual);
+    }
+
+    @Test
+    public void testAddscore(){
         Student s1 = new Student("6610402222", "alina");
         s1.addScore(40);
         assertEquals(40,s1.getScore());
@@ -23,14 +30,14 @@ class StudentTest {
     }
 
     @Test
-    void testCalculateGrade(){
+    public void testCalculateGrade(){
         Student s1 = new Student("6610402223", "baline", 50);
         s1.addScore(10);
         assertEquals("C", s1.grade());
     }
 
     @Test
-    void testChangeName(){
+    public void testChangeName(){
         Student s1 = new Student("6610402222", "alina");
         s1.changeName("alan");
         assertEquals("alan", s1.getName());
