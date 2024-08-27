@@ -25,10 +25,12 @@ class UserTest {
         assertTrue(actual);
     }
 
-//    @Test
-//    void TestSetPassword(){
-//        User user = new User("user1", "1234");
-//        user.setPassword("1234");
-//        assertEquals(BCrypt.verifyer().verify(password.toCharArray(), this.password), user.getPassword());
-//    }
+    @Test
+    void testSetPassword() {
+        User user = new User("user1", "1234");
+        user.setPassword("5678");
+        boolean unexpected = user.validatePassword("1234");
+        assertFalse(unexpected);
+    }
+
 }

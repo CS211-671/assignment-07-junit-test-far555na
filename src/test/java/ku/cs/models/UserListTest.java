@@ -51,11 +51,9 @@ class UserListTest {
         userList.addUser("user3", "003");
 
         // TODO: call login() with correct username and password
-        //User expected = new User("user1", "001");
         User actual = userList.login("user1", "001");
 
         // TODO: assert that User object is found
-        //assertEquals(expected, actual);
         assertNotNull(actual);
     }
 
